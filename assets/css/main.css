@@ -1,0 +1,40 @@
+body {
+  background-image: linear-gradient(to bottom right, #5cc8ff 0%, #d63c6b 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: sans-serif;
+}
+
+@media screen and (max-width: 482px) {
+  body {
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  body .main {
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    position: absolute;
+  }
+}
+
+body .main .container .row .col-md-8 {
+  height: auto;
+}
+
+body .main .container .row .col-md-4 {
+  height: auto;
+}
+
+body .main .container .row .image {
+  text-align: center;
+}
+
+body .main .container .row .image img {
+  width: 150px;
+  height: 140px;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=main.css.map */

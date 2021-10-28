@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Yakıt Hesapla</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" crossorigin="anonymous">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  </head>
+  <body>
+
+    <!--YakıtHesapla MainArea-->
+    <div class="main">
+      <div class="container">
+        <div class="row">
+          <!--YakıtHesapla LeftArea-->
+          <div class="col-md-8 shadow mb-4 bg-light pb-4">
+              <div class="text-center mb-3 mt-4 h2"><i class="fas fa-gas-pump"></i> </div>
+              <div class="text-center h3 mb-4 pl-3 pr-3">Yaktığın Yakıtın Ücretini Hesapla</div>
+              <p class="pl-3 pr-3 mb-4">
+                <span class="text-danger font-weight-bold">* Kullanım Bilgisi</span>
+                <br>
+                <span>Merhaba, öncelikle boş depo ile yakıt satın aldıktan sonra (depoyu fulleyin) aracınızdaki ayarlanabilir kilometre sayacını sıfırlayıp, dolu depo boşalana kadar geçen sürede alınan mesafeyi not alın. Daha sonra tekrar depoyu fulleyin ve ödediğiniz ücreti burada ilgili alanlara yazarak hesapalama yapın.</span>
+              </p>
+                <div class="image mb-3">
+                   <img id="car" alt="car" style="display: none;" class="shadow" src="/assets/imgs/car.jpg">
+                   <img id="motobike" alt="motobike" style="display: none;" class="shadow" src="/assets/imgs/motobike.jpg">
+              </div>
+              <div class="form w-100 pl-3 pr-3">
+                <form id="#form" class="w-100" >
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Araç Tipinizi Seçiniz</label>
+                    <select id="select" class="form-control">
+                      <option id="firstSelect" value="0">Seçim Yapınız</option>
+                      <option id="carSelected" value="1">Araba</option>
+                      <option id="motobikeSelected" value="2">Motosiklet</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Kilometre Sayacında Gösterilen Gidilen Mesafe</label>
+                    <input type="text" class="form-control" id="data1" placeholder="Veri giriniz." required>
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Aldığınız Yakıtın Fişteki Ücreti</label>
+                    <input type="text" class="form-control" id="data2" placeholder="Veri giriniz." required>
+                    <button id="send" type="button"  class="btn btn-primary float-right mt-4">Hesapla</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          <!--YakıtHesapla RightArea-->
+          <div class="col-md-4 shadow mb-4 bg-light pb-4">
+            <div class="sonucMain">
+            <div class="text-center h3 mt-5 mb-4">Sonuç</div>
+            <hr class="w-75">
+            <div class="col-md-12">
+              <ul id="sonuc" class="pl-3">
+                <li>
+                  <span class="whatSelected"></span>
+                  <ul class="pl-3">
+                    <li class="gidilenYol"></li>
+                    <li class="kmUcreti"></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/popper.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/sweetalert.js"></script>
+  </body>
+</html>
